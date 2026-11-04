@@ -8,7 +8,7 @@ import struct
 import time
 import uuid
 
-from . import assets, cache, library, resourcefs
+from . import assets, cache, resourcefs
 from .paths import ROOT, CACHE, VIEWER, config, native_env
 
 
@@ -56,6 +56,10 @@ class SwitchReplay(Exception):
     def __init__(self, path): self.path = path
 
 
+class CloseReplay(Exception):
+    pass
+
+
 def phase(command, log, env, timeout, viewer=None, stage=None):
     started = time.perf_counter()
     process = subprocess.Popen(command, env=env, cwd=ROOT, stdout=log, stderr=subprocess.STDOUT)
@@ -64,9 +68,9 @@ def phase(command, log, env, timeout, viewer=None, stage=None):
         while process.poll() is None:
             if viewer:
                 request = Path(log.name).parent / "live/open-html.txt"
-                if request.exists(): raise SwitchReplay(request.read_text().strip())
+                if request.exists(): raise SwitchReplay(request.read_text())
             if viewer and viewer.poll() is not None:
-                raise RuntimeError("已关闭回放窗口，准备任务已取消")
+                raise CloseReplay
             if time.monotonic() >= deadline:
                 raise RuntimeError(f"原生准备超时（{timeout} 秒），请查看 prepare.log")
             time.sleep(.1)
@@ -84,7 +88,7 @@ def phase(command, log, env, timeout, viewer=None, stage=None):
         timing.write_text(json.dumps(rows, indent=2) + "\n")
 
 
-def prepare(replay, parsed, cfg, run, env, command, rebuild, html, viewer=None):
+def prepare(replay, parsed, cfg, run, env, command, rebuild, viewer=None):
     from .native_snapshots import SUPPORTED_BUILDS
     snapshots = cfg["build"] in SUPPORTED_BUILDS
     identity = cache.key(replay, cfg)
@@ -139,7 +143,6 @@ def prepare(replay, parsed, cfg, run, env, command, rebuild, html, viewer=None):
         cache.save(identity, run)
     report = json.loads((run / "report.json").read_text())
     report["cache_reuse"] = {"commands": bool(cached), "snapshots": tick_cached}
-    library.remember(html, replay, identity, report)
     return report, cached, identity
 
 
@@ -148,9 +151,9 @@ def play(args, command, parse_html, doctor):
     cache.migrate_legacy()
     if not args.html and (args.no_window or args.prepare_only):
         if os.isatty(0):
-            args.html = input("请输入或拖入 RoyaleAPI HTML 文件路径（也可填写已缓存的对局编号）：\n> ")
+            args.html = input("请输入 RoyaleAPI HTML 文件路径：\n> ")
         if not args.html:
-            raise ValueError("无窗口或只准备缓存时，请提供 HTML 文件路径或对局编号")
+            raise ValueError("无窗口或只准备缓存时，请提供 HTML 文件路径")
     options = resourcefs.settings(args.settings)
     width, height = args.width or options["width"], args.height or options["height"]
     if not 160 <= width <= 4096 or not 160 <= height <= 4096:
@@ -184,13 +187,15 @@ def play(args, command, parse_html, doctor):
                 if viewer.poll() is not None:
                     return 0
                 if request.exists():
-                    args.html = request.read_text().strip()
+                    args.html = request.read_text()
                     request.unlink()
                 if not args.html:
                     time.sleep(.1)
             started = time.perf_counter()
         status(run, "prepare", "正在准备本地对局…")
-        html = library.resolve(args.html)
+        html = Path(args.html).expanduser().resolve()
+        if not html.is_file():
+            raise ValueError(f"找不到 HTML 文件：{html}")
         replay, parsed = parse_html(html)
         replay["location"] = resourcefs.DEFAULT_LOCATION
         parsed.write_text(json.dumps(replay, ensure_ascii=False, indent=2) + "\n")
@@ -210,12 +215,11 @@ def play(args, command, parse_html, doctor):
         if viewer is None and not args.no_window and not args.prepare_only:
             viewer = subprocess.Popen([display, str(live), str(width), str(height)], cwd=ROOT)
         ready = time.perf_counter()
-        report, cached, identity = prepare(replay, parsed, cfg, run, env, command, args.rebuild, html, viewer)
+        report, cached, identity = prepare(replay, parsed, cfg, run, env, command, args.rebuild, viewer)
         stages.update(prepare_seconds=time.perf_counter()-ready, prepare_cache_hit=cached,
                       tick_cache_hit=report["cache_reuse"]["snapshots"], cache_key=identity)
         if (run / "phase-timings.json").exists():
             stages["preparation_phases"] = json.loads((run / "phase-timings.json").read_text())
-        print("缓存编号：", replay["tag"], flush=True)
         print("本地模拟皇冠：", report["simulated_crowns"], "网页记录：", report["recorded_crowns"], flush=True)
         if report.get("native_ended_early"):
             print(f"注意：原生模拟提前结束，有 {report['unexecuted_cards']} 张后续出牌未执行；此缓存是部分重建，不是完整历史还原。", flush=True)
@@ -257,7 +261,6 @@ def play(args, command, parse_html, doctor):
             status(run, "validation", message, message)
         if args.prepare_only:
             (run / "timings.json").write_text(json.dumps(stages, indent=2) + "\n")
-            print(f"以后可执行：./run.sh play {replay['tag']}", flush=True)
             return 0
         status(run, "render", "缓存已就绪，正在启动原生渲染…")
         env.update(NEO_RENDER_WIDTH=str(width), NEO_RENDER_HEIGHT=str(height), CRX_RENDER_ORDER="device_first", CRX_KEEP_RESOURCE_VARIANT="1",
@@ -289,7 +292,7 @@ def play(args, command, parse_html, doctor):
                 if viewer and viewer.poll() is not None: break
                 request = live / "open-html.txt"
                 if request.exists():
-                    next_html = request.read_text().strip(); break
+                    next_html = request.read_text(); break
                 frame = live / "frame.shm"
                 if frame.exists():
                     with frame.open("rb") as f: header = f.read(64)
@@ -312,6 +315,8 @@ def play(args, command, parse_html, doctor):
                 raise RuntimeError("运行时间内没有播到结束，请查看 render.log")
     except SwitchReplay as request:
         next_html = request.path
+    except CloseReplay:
+        return 0
     finally:
         try:
             stop(worker)

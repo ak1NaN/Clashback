@@ -6,16 +6,15 @@ HTML 只记录了对局的部分信息。起手牌、随机种子或技能对象
 
 ## 开始使用
 
-1. 准备 Apple 芯片 Mac、macOS 14.4 或更高版本、Rosetta 2，以及包含 `x86_64` 的 Python 3。可使用 Python 3.12 Universal2。随仓库提供的运行库可直接使用。
+1. 准备 Apple 芯片 Mac、macOS 14.4 或更高版本、Rosetta 2，以及包含 `x86_64` 的 Python 3.11 或更高版本，例如 Python 3.12 Universal2。保留完整项目文件夹，让 `Clashback.app` 与 `studio.py` 位于同一层。
 2. 在 RoyaleAPI 打开要回放的对局详情，保存包含出牌记录的网页为本地 `.html` 文件。
-3. 双击 `打开回放.command`。等待窗口出现后，点击 **打开 HTML…**，选择刚保存的文件。播放期间也可以通过该按钮换局。
+3. 双击 `Clashback.app`。点击 **打开 HTML…**，从原位置选择刚保存的文件。播放期间也可以通过该按钮换局。
 
-也可以在终端进入项目根目录后执行：
+需要检查环境或指定 HTML 路径时，可在项目根目录执行以下命令。
 
 ```sh
-./run.sh doctor --check-gl
-./run.sh open
-./run.sh play "/path/to/对局.html"
+python3 -B studio.py doctor --check-gl
+python3 -B studio.py play "/path/to/对局.html"
 ```
 
 第一条命令检查 Python 架构、游戏资源和图形环境。如果默认的 `python3` 只有 arm64，可用 `NEO_PYTHON_X86` 指定具备 x86_64 的 Python 的绝对路径。首次准备一场对局时，程序会校准起手、模拟出牌并生成逐 tick 缓存，耗时视对局而定。
@@ -46,7 +45,7 @@ HTML 只记录了对局的部分信息。起手牌、随机种子或技能对象
 
 1. 在 MuMu 启动游戏，等待客户端和游戏内资源更新完成并进入主界面。
 2. 检查 `updater/config.json` 中的 `mumu_path` 和 ADB 设备地址 `serial`。默认使用 `/Applications/MuMuPlayer.app` 和 `127.0.0.1:16384`。如需指定 ADB 可执行文件，填写 `adb_path`。
-3. 关闭回放窗口，双击 `updater/更新游戏.command`，也可以在项目根目录执行 `./run.sh update-game`。
+3. 关闭回放窗口，双击 `updater/更新游戏.command`，也可以在项目根目录执行 `python3 -B studio.py update-game`。
 4. 同一客户端构建的小型热更新会复用现有 x86_64 引擎。客户端构建号变化时，需要在 `apkm_path` 填入与 MuMu 构建号相同、带 x86_64 分包的 APKM。新引擎还需要有对应的适配和观战资源清单。
 
 更新器会按 MuMu 的资源指纹同步数据，整理观战资源并验证渲染，然后替换 `game/`。
@@ -55,21 +54,17 @@ HTML 只记录了对局的部分信息。起手牌、随机种子或技能对象
 
 | 路径 | 内容 |
 | --- | --- |
-| `打开回放.command`、`run.sh`、`studio.py` | 双击入口、Shell 入口和 Python 主程序 |
+| `Clashback.app`、`studio.py` | 双击入口和负责回放流程的 Python 主程序 |
 | `config.json`、`Background.png` | 播放器配置和等待背景 |
 | `neo_replay/` | HTML 解析、起手校准、对局重建与校验、播放控制及逐 tick 缓存 |
 | `game/` | 游戏引擎、精简后的观战资源，以及记录版本和资源来源的 `manifest.json` |
-| `runtime/` | 预编译的窗口程序、兼容库与 ANGLE 图形库 |
+| `runtime/` | 预编译的兼容库与 ANGLE 图形库 |
 | `native/`、`vendor/crx/`、`tools/` | Swift 窗口源码、Android 引擎加载与 macOS 兼容代码、运行组件的本地构建工具 |
 | `updater/` | MuMu 同步、更新配置、引擎适配资源清单和更新入口 |
-| `cache/` | 运行后生成，保存导入结果、逐 tick 缓存、会话日志和更新临时文件 |
-| `replays/` | 导入成功后保存的 HTML 副本和对局索引 |
-| `config/` | 运行时的引擎互斥锁，由程序管理 |
+| `cache/` | 运行后生成，保存解析结果、逐 tick 缓存、日志、更新临时文件和引擎锁 |
 
-切换到新对局会清除上一局的准备缓存，HTML 副本留在 `replays/`。需要排查对局时，可查看终端打印的会话目录里的 `prepare.log` 和 `report.json`。
+切换到新对局会清除上一局的准备缓存，原 HTML 留在你选取的位置。需要排查时，可查看 `cache/launcher.log` 和对应会话目录里的 `prepare.log`、`report.json`。
 
-## Dock 上没有自定义图标的窗口是什么？
+## 应用如何启动？
 
-它是仓库内置的 **ReplayWindow**，由 Swift 和 macOS AppKit 编写。它位于 `runtime/bin/ReplayWindow.app`，包内显示名仍是 **Neo Replay**。启动脚本通过 Python 直接拉起包里的可执行文件，并传入当前会话目录。窗口负责显示游戏画面、选择 HTML 和接收播放操作。
-
-这个内部 `.app` 没有配置自定义图标，所以 Dock 可能显示系统的默认应用图标。窗口本身是 arm64 程序。后台的 x86_64 Python 进程通过 Rosetta 运行，加载游戏引擎并将画面交给窗口。
+双击 `Clashback.app` 会启动 Python 主程序。主程序读取配置并创建会话，然后打开回放窗口。窗口是 arm64 程序，游戏引擎由后台的 x86_64 Python 进程通过 Rosetta 运行。

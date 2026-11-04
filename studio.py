@@ -82,8 +82,8 @@ def main():
     imp = commands.add_parser("import-html", help="Parse HTML without requiring engine files")
     imp.add_argument("html", type=Path)
     imp.add_argument("--out", type=Path)
-    pl = commands.add_parser("play", aliases=["cache", "open"], help="打开 HTML 或缓存编号；cache 只准备缓存")
-    pl.add_argument("html", nargs="?", help="HTML 文件路径或已缓存的对局编号；留空先打开窗口")
+    pl = commands.add_parser("play", aliases=["cache", "open"], help="打开 HTML；cache 只准备缓存")
+    pl.add_argument("html", nargs="?", help="HTML 文件路径；留空先打开窗口")
     pl.add_argument("--prepare-only", action="store_true", help="只准备并保存缓存，不启动对战画面")
     pl.add_argument("--seconds", type=int, default=1800)
     pl.add_argument("--speed", type=float, default=1)
@@ -96,17 +96,9 @@ def main():
     pl.add_argument("--rebuild", action="store_true", help="Force calibration and simulation instead of reusing a verified replay")
     pl.add_argument("--cpu-frames", action="store_true", help="Use slower RGBA readback instead of GPU shared surfaces")
     pl.add_argument("--recording-mode", action="store_true", help="干净录屏窗口，开局暂停，等待自动化播放指令")
-    commands.add_parser("list", help="列出已缓存的对局")
     preview = commands.add_parser("preview-background", help="预览等待背景，不启动游戏引擎")
     preview.add_argument("--settings", "--config", type=Path, default=USER_CONFIG, help="播放设置，默认读取根目录 config.json")
     args = p.parse_args(sys.argv[1:] or ["play"])
-    if args.command == "list":
-        from neo_replay.library import index
-        for key, value in index().items():
-            check = value.get("terminal_validation")
-            label = ("终局校验通过" if check["passed"] else "校验存在差异") if check else "尚未进行终局血量校验"
-            print(key, " · ".join(value["players"]), f"{value['end_tick']/20:.1f}s", label)
-        return 0
     if args.command == "cache":
         args.prepare_only = True
         args.no_window = True

@@ -8,10 +8,10 @@ RUNTIME = ROOT / "runtime"
 CACHE = ROOT / "cache"
 CRX = ROOT / "vendor" / "crx"
 GAME = ROOT / "game"
-ENGINE_LOCK = ROOT / "config" / ".engine.lock"
+ENGINE_LOCK = CACHE / ".engine.lock"
 LEGACY_GAME_CONFIG = ROOT / "config" / "game.json"
 USER_CONFIG = ROOT / "config.json"
-VIEWER = RUNTIME / "bin/ReplayWindow.app/Contents/MacOS/ReplayWindow"
+VIEWER = ROOT / "Clashback.app/Contents/MacOS/Clashback"
 
 
 def read_user_settings(path, section):

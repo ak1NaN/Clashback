@@ -5,12 +5,35 @@ import json
 from pathlib import Path
 import platform
 import plistlib
+import shutil
 import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from neo_replay.paths import RUNTIME, VIEWER
+
+
+def build_viewer():
+    contents = VIEWER.parent.parent
+    VIEWER.parent.mkdir(parents=True, exist_ok=True)
+    resources = contents / "Resources"
+    resources.mkdir(exist_ok=True)
+    shutil.copy2(ROOT / "native/Clashback.icns", resources / "Clashback.icns")
+    with (contents / "Info.plist").open("wb") as f:
+        plistlib.dump({
+            "CFBundleExecutable": VIEWER.name,
+            "CFBundleIdentifier": "local.neo.ReplayWindow",
+            "CFBundleName": "Clashback",
+            "CFBundleDisplayName": "Clashback",
+            "CFBundleIconFile": "Clashback.icns",
+            "CFBundlePackageType": "APPL",
+            "NSHighResolutionCapable": True,
+            "LSMinimumSystemVersion": "14.4",
+        }, f)
+    subprocess.run(["swiftc", "-target", "arm64-apple-macos14.4", "-O", "-o", str(VIEWER),
+                    str(ROOT / "native/ReplayWindow.swift")], check=True)
+    subprocess.run(["codesign", "--force", "--sign", "-", str(contents.parent)], check=True)
 
 
 def main():
@@ -42,15 +65,8 @@ def main():
         if len(architectures) > 1:
             subprocess.run(["lipo", str(src), "-thin", "x86_64", "-output", str(dest)], check=True)
         elif src.resolve() != dest.resolve():
-            import shutil
             shutil.copy2(src, dest)
-    VIEWER.parent.mkdir(parents=True, exist_ok=True)
-    with (VIEWER.parent.parent / "Info.plist").open("wb") as f:
-        plistlib.dump({"CFBundleExecutable": "ReplayWindow", "CFBundleIdentifier": "local.neo.ReplayWindow",
-                       "CFBundleName": "Neo Replay", "CFBundlePackageType": "APPL",
-                       "NSHighResolutionCapable": True, "LSMinimumSystemVersion": "14.4"}, f)
-    subprocess.run(["swiftc", "-O", "-o", str(VIEWER),
-                    str(ROOT / "native/ReplayWindow.swift")], check=True)
+    build_viewer()
     (RUNTIME / "setup.json").write_text(json.dumps({"python": sys.executable, "angle_source": str(angle),
                                                     "bridge_arch": "x86_64"}, indent=2) + "\n")
     print("Built native bridge, copied local ANGLE, built ReplayWindow. All outputs are in runtime/.")

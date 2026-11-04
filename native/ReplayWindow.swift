@@ -51,7 +51,7 @@ final class ReplayButton: NSButton {
 func projectRoot(for folder: URL) -> URL? {
     var current = folder
     while current.path != "/" {
-        if FileManager.default.fileExists(atPath: current.appendingPathComponent("config/game.json").path) { return current }
+        if FileManager.default.fileExists(atPath: current.appendingPathComponent("studio.py").path) { return current }
         current.deleteLastPathComponent()
     }
     return nil
@@ -117,13 +117,9 @@ final class LoadingProgressBar: NSView {
     override var isOpaque: Bool { false }
 
     func loadFont(project: URL?) {
-        guard let project = project,
-              let data = try? Data(contentsOf: project.appendingPathComponent("config/game.json")),
-              let config = (try? JSONSerialization.jsonObject(with: data)) as? [String: Any],
-              let assets = config["assets"] as? String else { return }
-        let root = assets.hasPrefix("/") ? URL(fileURLWithPath: assets) : project.appendingPathComponent(assets)
+        guard let fontFolder = project?.appendingPathComponent("game/assets/font") else { return }
         for name in ["supercell-magic_0.ttf", "sc_ccbackbeatregular.ttf"] {
-            let file = root.appendingPathComponent("font").appendingPathComponent(name)
+            let file = fontFolder.appendingPathComponent(name)
             guard let descriptors = CTFontManagerCreateFontDescriptorsFromURL(file as CFURL) as? [CTFontDescriptor],
                   let descriptor = descriptors.first,
                   let name = CTFontDescriptorCopyAttribute(descriptor, kCTFontNameAttribute) as? String else { continue }
@@ -525,7 +521,10 @@ final class Delegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     var window: NSWindow!
     var recordingActivity: NSObjectProtocol?
     func applicationDidFinishLaunching(_ note: Notification) {
-        guard CommandLine.arguments.count == 2 || CommandLine.arguments.count == 4 else { fputs("ReplayWindow LIVE_DIR [WIDTH HEIGHT]\n", stderr); NSApp.terminate(nil); return }
+        guard CommandLine.arguments.count == 2 || CommandLine.arguments.count == 4 else { fputs("Clashback LIVE_DIR [WIDTH HEIGHT]\n", stderr); NSApp.terminate(nil); return }
+        if let icon = Bundle.main.image(forResource: "Clashback") {
+            NSApp.applicationIconImage = icon
+        }
         let view = ReplayView(folder: URL(fileURLWithPath: CommandLine.arguments[1]))
         if view.recordingMode {
             recordingActivity = ProcessInfo.processInfo.beginActivity(options: [.userInitiated, .latencyCritical],
@@ -545,13 +544,75 @@ final class Delegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
             // window's backing-store redraw even while its frame reader runs.
             window.level = .floating
         }
-        let project = projectRoot(for: view.folder)?.lastPathComponent ?? "本地回放"
-        window.title = "Neo Replay — \(project)"
+        window.title = "Clashback"
         window.contentView = view; window.delegate = self
         window.center(); window.makeKeyAndOrderFront(nil); window.makeFirstResponder(view)
         NSApp.activate(ignoringOtherApps: true)
     }
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool { true }
+}
+
+func launchReplay() -> Int32 {
+    let root = Bundle.main.bundleURL.resolvingSymlinksInPath().deletingLastPathComponent()
+    let studio = root.appendingPathComponent("studio.py")
+    let log = root.appendingPathComponent("cache/launcher.log")
+    do {
+        guard FileManager.default.fileExists(atPath: studio.path) else {
+            throw NSError(domain: "Clashback", code: 1, userInfo: [
+                NSLocalizedDescriptionKey: "请把 Clashback.app 放在项目文件夹内，与 studio.py 放在同一层。"])
+        }
+        let path = ProcessInfo.processInfo.environment["PATH"] ?? ""
+        let directories = path.split(separator: ":").map(String.init) +
+            ["/usr/local/bin", "/Library/Frameworks/Python.framework/Versions/Current/bin",
+             "/opt/homebrew/bin", "/usr/bin"]
+        let python = directories.map { $0 + "/python3" }.first { candidate in
+            guard FileManager.default.isExecutableFile(atPath: candidate) else { return false }
+            let check = Process()
+            check.executableURL = URL(fileURLWithPath: "/usr/bin/arch")
+            check.arguments = ["-x86_64", candidate, "-c", "import sys; sys.exit(sys.version_info < (3, 11))"]
+            check.standardOutput = FileHandle.nullDevice
+            check.standardError = FileHandle.nullDevice
+            do { try check.run() } catch { return false }
+            check.waitUntilExit()
+            return check.terminationStatus == 0
+        }
+        guard let python = python else {
+            throw NSError(domain: "Clashback", code: 2, userInfo: [
+                NSLocalizedDescriptionKey: "请安装 Rosetta 2 和支持 x86_64 的 Python 3.11 或更高版本，例如 Python 3.12 Universal2。"])
+        }
+        try FileManager.default.createDirectory(at: log.deletingLastPathComponent(), withIntermediateDirectories: true)
+        try Data().write(to: log)
+        let output = try FileHandle(forWritingTo: log)
+        defer { try? output.close() }
+        let process = Process()
+        process.executableURL = URL(fileURLWithPath: python)
+        process.arguments = ["-Bu", studio.path, "open"]
+        process.currentDirectoryURL = root
+        process.standardInput = FileHandle.nullDevice
+        process.standardOutput = output
+        process.standardError = output
+        try process.run()
+        process.waitUntilExit()
+        if process.terminationStatus == 0 { return 0 }
+        let lines = (try? String(contentsOf: log, encoding: .utf8))?.split(separator: "\n") ?? []
+        let detail = lines.last(where: { $0.hasPrefix("ERROR: ") }).map { String($0.dropFirst(7)) }
+        throw NSError(domain: "Clashback", code: Int(process.terminationStatus), userInfo: [
+            NSLocalizedDescriptionKey: [detail, "日志：\(log.path)"].compactMap { $0 }.joined(separator: "\n\n")])
+    } catch {
+        let app = NSApplication.shared
+        app.setActivationPolicy(.accessory)
+        app.activate(ignoringOtherApps: true)
+        let alert = NSAlert()
+        alert.alertStyle = .warning
+        alert.messageText = "Clashback 无法继续"
+        alert.informativeText = error.localizedDescription
+        alert.runModal()
+        return 1
+    }
+}
+
+if CommandLine.arguments.dropFirst().allSatisfy({ $0.hasPrefix("-psn_") }) {
+    exit(launchReplay())
 }
 
 let app = NSApplication.shared
