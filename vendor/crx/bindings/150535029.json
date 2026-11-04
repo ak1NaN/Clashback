@@ -1,0 +1,1437 @@
+{
+ "build": "150535029",
+ "libg_sha256": "fa6704b83cb9c5b8eecb7b56c9671b834d636a3a6d9ac446e698e1262dc246ba",
+ "note": "Hand-verified addresses for build 150535029 x86_64 (from the CR sandbox bindings and gates 1-3, 2026-10-07). port/record.py adds the instruction bytes; port/port.py maps them to a new build.",
+ "functions": {
+  "native_alloc": {
+   "rva": "0x18B1600",
+   "insns": [
+    "ff25da0f1000"
+   ]
+  },
+  "native_free": {
+   "rva": "0x18B1630",
+   "insns": [
+    "ff25c20f1000"
+   ]
+  },
+  "string_from_utf8": {
+   "rva": "0x140F8F0",
+   "insns": [
+    "4157",
+    "4156",
+    "4154",
+    "53",
+    "50",
+    "4989f6",
+    "4889fb",
+    "b8ffffffff"
+   ]
+  },
+  "string_destroy": {
+   "rva": "0x140F7D0",
+   "insns": [
+    "837f0408",
+    "7c0d",
+    "488b7f08",
+    "4885ff",
+    "0f853d1e4a00",
+    "c3"
+   ]
+  },
+  "parse_json_object": {
+   "rva": "0x127C450",
+   "insns": [
+    "4885ff",
+    "7462",
+    "837f0400",
+    "745c",
+    "4157",
+    "4156",
+    "53",
+    "4883ec10"
+   ]
+  },
+  "json_get_object": {
+   "rva": "0x1279A60",
+   "insns": [
+    "53",
+    "4883c718",
+    "e8662fafff",
+    "4885c0",
+    "7417",
+    "488b5820",
+    "4885db",
+    "740e"
+   ]
+  },
+  "json_get_data": {
+   "rva": "0x11C79C0",
+   "insns": [
+    "4156",
+    "53",
+    "50",
+    "89cb",
+    "4989d6",
+    "ba01000000",
+    "e8fd1f0b00",
+    "4885c0"
+   ]
+  },
+  "toml_getter_a": {
+   "rva": "0x12799D0",
+   "insns": [
+    "53",
+    "4883c718",
+    "e8f62fafff",
+    "4885c0",
+    "7417",
+    "488b5820",
+    "4885db",
+    "740e"
+   ]
+  },
+  "toml_getter_b": {
+   "rva": "0x1279A00",
+   "insns": [
+    "53",
+    "4883c718",
+    "e8c62fafff",
+    "4885c0",
+    "7417",
+    "488b5820",
+    "4885db",
+    "740e"
+   ]
+  },
+  "toml_has_key": {
+   "rva": "0x1279A30",
+   "insns": [
+    "53",
+    "4883c718",
+    "e8962fafff",
+    "4885c0",
+    "7417",
+    "488b5820",
+    "4885db",
+    "740e"
+   ]
+  },
+  "toml_get_value": {
+   "rva": "0x1279AA0",
+   "insns": [
+    "53",
+    "4883c718",
+    "e8262fafff",
+    "4885c0",
+    "7417",
+    "488b5820",
+    "4885db",
+    "740e"
+   ]
+  },
+  "asset_system_init": {
+   "rva": "0x1353750",
+   "insns": [
+    "4156",
+    "53",
+    "50",
+    "bf88010000",
+    "e8a2de5500",
+    "4989c6",
+    "4889c7",
+    "e847e95500"
+   ]
+  },
+  "asset_system_get": {
+   "rva": "0x1353810",
+   "insns": [
+    "488b0521dc7600",
+    "c3"
+   ]
+  },
+  "asset_system_prepare": {
+   "rva": "0x1354F50",
+   "insns": [
+    "4157",
+    "4156",
+    "4154",
+    "53",
+    "50",
+    "4889fb",
+    "0f57c0",
+    "4c8bb768010000"
+   ]
+  },
+  "set_root": {
+   "rva": "0x1355060",
+   "insns": [
+    "4157",
+    "4156",
+    "4154",
+    "53",
+    "50",
+    "4989f6",
+    "4889fb",
+    "f60601"
+   ]
+  },
+  "set_secondary_root": {
+   "rva": "0x1355110",
+   "insns": [
+    "4157",
+    "4156",
+    "4154",
+    "53",
+    "50",
+    "4989f6",
+    "4889fb",
+    "f60601"
+   ]
+  },
+  "mount": {
+   "rva": "0x1355FD0",
+   "insns": [
+    "55",
+    "4157",
+    "4156",
+    "4155",
+    "4154",
+    "53",
+    "4883ec38",
+    "4989d6"
+   ]
+  },
+  "save_path": {
+   "rva": "0x1424690",
+   "insns": [
+    "53",
+    "4889fb",
+    "488d35d5aa6a00",
+    "e8d0b2feff",
+    "4889d8",
+    "5b",
+    "c3"
+   ]
+  },
+  "secondary_path": {
+   "rva": "0x14246B0",
+   "insns": [
+    "53",
+    "4889fb",
+    "488d35c5aa6a00",
+    "e8b0b2feff",
+    "4889d8",
+    "5b",
+    "c3"
+   ]
+  },
+  "cache_path": {
+   "rva": "0x14246D0",
+   "insns": [
+    "53",
+    "4889fb",
+    "488d35b5aa6a00",
+    "e890b2feff",
+    "4889d8",
+    "5b",
+    "c3"
+   ]
+  },
+  "temp_path": {
+   "rva": "0x1424700",
+   "insns": [
+    "53",
+    "4889fb",
+    "488d3555aa6a00",
+    "e860b2feff",
+    "4889d8",
+    "5b",
+    "c3"
+   ]
+  },
+  "runtime_clock_init": {
+   "rva": "0x1299150",
+   "insns": [
+    "803db92e820000",
+    "7550",
+    "53",
+    "4883ec10",
+    "488d35932e8200",
+    "488d7c2408",
+    "e8316a1500",
+    "488b1d922e8200"
+   ]
+  },
+  "game_singleton_init": {
+   "rva": "0x7259B0",
+   "insns": [
+    "488b05e9b53301",
+    "4885c0",
+    "7401",
+    "c3"
+   ]
+  },
+  "thread_option_set": {
+   "rva": "0x11E6DA0",
+   "insns": [
+    "53",
+    "4883ec10",
+    "89f3",
+    "897c2404",
+    "488d742404",
+    "4889742408",
+    "488d3d542b8d00",
+    "488d1514d414ff"
+   ]
+  },
+  "game_main_init": {
+   "rva": "0x727050",
+   "insns": [
+    "55",
+    "4157",
+    "4156",
+    "4155",
+    "4154",
+    "53",
+    "4883ec78",
+    "4989f6"
+   ]
+  },
+  "resource_variant": {
+   "rva": "0x137F220",
+   "insns": [
+    "53",
+    "0fb602",
+    "83f801",
+    "7412",
+    "83f802",
+    "751a",
+    "4889fb",
+    "e82a000000"
+   ]
+  },
+  "config_string_registration": {
+   "rva": "0x14A8760",
+   "insns": [
+    "4157",
+    "4156",
+    "4155",
+    "4154",
+    "53",
+    "4883ec10",
+    "4989d6",
+    "4889f3"
+   ]
+  },
+  "config_flag_registration": {
+   "rva": "0x14A88D0",
+   "insns": [
+    "55",
+    "4156",
+    "53",
+    "4883ec10",
+    "89d5",
+    "4889f3",
+    "4989fe",
+    "488b37"
+   ]
+  },
+  "manager_update": {
+   "rva": "0xCE7810",
+   "insns": [
+    "55",
+    "4156",
+    "53",
+    "4883ec10",
+    "f30f1144240c",
+    "4889fb",
+    "488b7f18",
+    "4885ff"
+   ]
+  },
+  "battle_state_update": {
+   "rva": "0xCE26D0",
+   "insns": [
+    "55",
+    "4157",
+    "4156",
+    "4154",
+    "53",
+    "4883ec60",
+    "f30f1144241c",
+    "4889fb"
+   ]
+  },
+  "battle_core_update": {
+   "rva": "0xCE2CC0",
+   "insns": [
+    "55",
+    "4157",
+    "4156",
+    "4155",
+    "4154",
+    "53",
+    "4881ec98000000",
+    "f30f11442410"
+   ]
+  },
+  "battle_load_replay": {
+   "rva": "0x10B85B0",
+   "insns": [
+    "55",
+    "4157",
+    "4156",
+    "4155",
+    "4154",
+    "53",
+    "4883ec18",
+    "4989cf"
+   ]
+  },
+  "location_battlefield": {
+   "rva": "0xE51C70",
+   "insns": [
+    "55",
+    "53",
+    "50",
+    "4889fb",
+    "e875b5fcff",
+    "89c5",
+    "4889df",
+    "e8cbb5fcff"
+   ]
+  },
+  "location_primary": {
+   "rva": "0xE51CA0",
+   "insns": [
+    "488b7f08",
+    "8b359a5db600",
+    "e9b1154200"
+   ]
+  },
+  "location_secondary": {
+   "rva": "0xE51CB0",
+   "insns": [
+    "488b7f08",
+    "488d3502584bff",
+    "31d2",
+    "e95e144200"
+   ]
+  },
+  "data_string_resolve": {
+   "rva": "0x11EA4A0",
+   "insns": [
+    "837f0408",
+    "7c06",
+    "488b7f08",
+    "eb04"
+   ]
+  },
+  "resource_lookup": {
+   "rva": "0x11E8860",
+   "insns": [
+    "55",
+    "4157",
+    "4156",
+    "4155",
+    "4154",
+    "53",
+    "4883ec38",
+    "89f5"
+   ]
+  },
+  "resource_list_ctor": {
+   "rva": "0x12B6FD0",
+   "insns": [
+    "488d05296b6d00",
+    "488907",
+    "0f57c0",
+    "0f114708",
+    "0f114714",
+    "31c0",
+    "874720",
+    "48c7471000000000"
+   ]
+  },
+  "resource_list_append": {
+   "rva": "0x12B7320",
+   "insns": [
+    "4883ec38",
+    "0fb6442440",
+    "89542420",
+    "894c2424",
+    "4489442428",
+    "44894c242c",
+    "c7442430ffffffff",
+    "88442434"
+   ]
+  },
+  "resource_list_load": {
+   "rva": "0x12B7480",
+   "insns": [
+    "b801000000",
+    "874720",
+    "e94308f3ff"
+   ]
+  },
+  "resource_list_dtor": {
+   "rva": "0x12B7050",
+   "insns": [
+    "4157",
+    "4156",
+    "53",
+    "4889fb",
+    "488d05a16a6d00",
+    "488907",
+    "8b4720",
+    "85c0"
+   ]
+  },
+  "battlefield_cache_root": {
+   "rva": "0x7DB170",
+   "insns": [
+    "50",
+    "488b05b8ac2901",
+    "4885c0",
+    "7406",
+    "488b4020",
+    "59",
+    "c3"
+   ]
+  },
+  "data_row_instance_id": {
+   "rva": "0xE1D1F0",
+   "insns": [
+    "53",
+    "4889fb",
+    "807f3800",
+    "7411",
+    "488d3d7cca4aff",
+    "be01000000",
+    "e8f59a4500",
+    "8b7b40"
+   ]
+  },
+  "build_battlefield_cache": {
+   "rva": "0xE2AF80",
+   "insns": [
+    "55",
+    "4157",
+    "4156",
+    "4155",
+    "4154",
+    "53",
+    "50",
+    "89cd"
+   ]
+  },
+  "player_elixir": {
+   "rva": "0xF93EA0",
+   "insns": [
+    "486387f8020000",
+    "4869c0ad8bdb68",
+    "4889c1",
+    "48c1e93f",
+    "48c1f82c",
+    "01c8",
+    "c3"
+   ]
+  },
+  "debugger_error": {
+   "rva": "0x1276D10",
+   "insns": [
+    "4157",
+    "4156",
+    "53",
+    "4883ec30",
+    "4889fb",
+    "85f6",
+    "7415",
+    "488b05b14e8400"
+   ]
+  },
+  "loading_screen_init": {
+   "rva": "0xCEDFF0",
+   "insns": [
+    "55",
+    "4157",
+    "4156",
+    "53",
+    "4883ec38",
+    "4889fb",
+    "488d3544d7d900",
+    "488d7c2408"
+   ]
+  },
+  "presentation_toggle": {
+   "rva": "0x72C8C0",
+   "insns": [
+    "53",
+    "488d0558163901",
+    "488b38",
+    "488b9fc8020000",
+    "4885db",
+    "742c",
+    "4084f6",
+    "7419"
+   ]
+  },
+  "asset_check": {
+   "rva": "0x13533E0",
+   "insns": [
+    "53",
+    "4889fb",
+    "488b3f",
+    "4885ff",
+    "743e",
+    "488b07",
+    "ff5038",
+    "84c0"
+   ]
+  },
+  "external_asset_check": {
+   "rva": "0x1353510",
+   "insns": [
+    "488b3f",
+    "4885ff",
+    "7406",
+    "488b07",
+    "ff6038"
+   ]
+  },
+  "manifest_loop": {
+   "rva": "0xE6F450",
+   "insns": [
+    "837e4c00",
+    "0f8ea9010000",
+    "55",
+    "4157",
+    "4156",
+    "4155",
+    "4154",
+    "53"
+   ]
+  },
+  "do_spell_command_ctor": {
+   "rva": "0xD8D4D0",
+   "insns": [
+    "53",
+    "4889fb",
+    "e817bcffff",
+    "488d05d070bb00",
+    "488903",
+    "48c7432800000000",
+    "c74330ffffffff",
+    "e8198c0f00"
+   ]
+  },
+  "do_spell_command_execute": {
+   "rva": "0xD8D520",
+   "insns": [
+    "55",
+    "4157",
+    "4156",
+    "4155",
+    "4154",
+    "53",
+    "4883ec48",
+    "89cd"
+   ]
+  },
+  "battle_command_hard_gate": {
+   "rva": "0xD50CD0",
+   "insns": [
+    "55",
+    "53",
+    "50",
+    "4889fb",
+    "e8f5f6ffff",
+    "84c0",
+    "745e",
+    "488b7b08"
+   ]
+  },
+  "battle_command_gate": {
+   "rva": "0xD503D0",
+   "insns": [
+    "55",
+    "4157",
+    "4156",
+    "53",
+    "4883ec18",
+    "83bf9801000000",
+    "7e0d",
+    "b001"
+   ]
+  },
+  "build_canonical_selection": {
+   "rva": "0x1048170",
+   "insns": [
+    "55",
+    "4157",
+    "4156",
+    "4155",
+    "4154",
+    "53",
+    "4883ec48",
+    "894c240c"
+   ]
+  },
+  "build_dynamic_choice_selection": {
+   "rva": "0xD71800",
+   "insns": [
+    "55",
+    "4157",
+    "4156",
+    "4155",
+    "4154",
+    "53",
+    "4883ec38",
+    "4189cd"
+   ]
+  },
+  "resolve_canonical_selection": {
+   "rva": "0xE85D40",
+   "insns": [
+    "4889fe",
+    "488b3f",
+    "4885ff",
+    "740c",
+    "488b07",
+    "488b80f0010000",
+    "ffe0"
+   ]
+  },
+  "validate_deployment": {
+   "rva": "0xD5B770",
+   "insns": [
+    "55",
+    "4157",
+    "4156",
+    "4155",
+    "4154",
+    "53",
+    "4883ec18",
+    "4489c3"
+   ]
+  },
+  "battle_identity_index": {
+   "rva": "0xD4E180",
+   "insns": [
+    "8b4f60",
+    "85c9",
+    "7e22",
+    "31c0",
+    "eb0d"
+   ]
+  },
+  "battle_player_at_index": {
+   "rva": "0xD4FFE0",
+   "insns": [
+    "83fe64",
+    "7503",
+    "31c0",
+    "c3"
+   ]
+  },
+  "deck_index_to_hand": {
+   "rva": "0xF96360",
+   "insns": [
+    "4881c710020000",
+    "e9741d0000"
+   ]
+  },
+  "hand_entry": {
+   "rva": "0xF8FD20",
+   "insns": [
+    "55",
+    "4157",
+    "4156",
+    "53",
+    "50",
+    "488b8720020000",
+    "4863ce",
+    "8b1c88"
+   ]
+  },
+  "next_deck_index": {
+   "rva": "0xF98120",
+   "insns": [
+    "837f2c00",
+    "7e07",
+    "488b4720",
+    "8b00",
+    "c3"
+   ]
+  },
+  "battle_commands_held": {
+   "rva": "0xD50D50",
+   "insns": [
+    "55",
+    "4156",
+    "53",
+    "4889fb",
+    "488b87b0010000",
+    "4885c0",
+    "7454",
+    "83780806"
+   ]
+  },
+  "set_replay_data": {
+   "rva": "0xCE7C40",
+   "insns": [
+    "4156",
+    "53",
+    "50",
+    "4989f6",
+    "4889fb",
+    "4885f6",
+    "7511",
+    "488d3d1fee61ff"
+   ]
+  },
+  "ability_command_ctor": {
+   "rva": "0xD8F360",
+   "insns": [
+    "4156",
+    "53",
+    "50",
+    "4989d6",
+    "4889fb",
+    "e8819dffff",
+    "488d05ba56bb00",
+    "488903"
+   ]
+  },
+  "ability_command_execute": {
+   "rva": "0xD8F3C0",
+   "insns": [
+    "55",
+    "4157",
+    "4156",
+    "4155",
+    "4154",
+    "53",
+    "4883ec18",
+    "894c240c"
+   ]
+  },
+  "logic_command_parse": {
+   "rva": "0xD8CB30",
+   "insns": [
+    "4157",
+    "4156",
+    "4155",
+    "4154",
+    "53",
+    "4883ec20",
+    "4989d7",
+    "4989f6"
+   ]
+  },
+  "logic_command_append": {
+   "rva": "0xD8BBF0",
+   "insns": [
+    "48833e00",
+    "0f8494000000",
+    "4156",
+    "53",
+    "50",
+    "4889f3",
+    "4989fe",
+    "488b7f20"
+   ]
+  },
+  "command_factory": {
+   "rva": "0xD89710",
+   "insns": [
+    "4157",
+    "4156",
+    "53",
+    "4883ec10",
+    "4889fb",
+    "83c6fe",
+    "81fe0a060000",
+    "0f8708200000"
+   ]
+  },
+  "character_damage_immune": {
+   "rva": "0xF740D0",
+   "insns": [
+    "b001",
+    "4883bf8001000000",
+    "7401",
+    "c3",
+    "83bf1c01000003",
+    "7528",
+    "55",
+    "53"
+   ]
+  },
+  "battle_snapshot_encode": {
+   "rva": "0x10B96F0",
+   "insns": [
+    "55",
+    "4157",
+    "4156",
+    "4155",
+    "4154",
+    "53",
+    "4883ec18",
+    "44894c2408"
+   ]
+  },
+  "battle_snapshot_load": {
+   "rva": "0x10BA1B0",
+   "insns": [
+    "55",
+    "4157",
+    "4156",
+    "4155",
+    "4154",
+    "53",
+    "4883ec38",
+    "48894c2430"
+   ]
+  },
+  "byte_stream_ctor": {
+   "rva": "0x1274770",
+   "insns": [
+    "4156",
+    "53",
+    "50",
+    "89f3",
+    "4989fe",
+    "e862210000",
+    "488d057b697100",
+    "498906"
+   ]
+  }
+ },
+ "thunks": {
+  "dispatcher": {
+   "rva": "0x1AE0270",
+   "insns": [
+    "eb18"
+   ]
+  }
+ },
+ "globals": {
+  "asset_system_global": {
+   "rva": "0x1AC1438"
+  },
+  "runtime_clock_global": {
+   "rva": "0x1ABC008"
+  },
+  "game_singleton_global": {
+   "rva": "0x1A60FA0"
+  },
+  "resource_loader_global": {
+   "rva": "0x1AB9988"
+  },
+  "manager_global": {
+   "rva": "0x1A85978"
+  },
+  "skip_core_and_presentation_flag": {
+   "rva": "0x1A85930"
+  },
+  "dynamic_choice_spell_vtable": {
+   "rva": "0x1942898"
+  }
+ },
+ "code": {
+  "manifest_loop_call": {
+   "rva": "0xE7160C",
+   "insns": [
+    "e83fdeffff",
+    "4889d8",
+    "4883c428",
+    "5b",
+    "415c",
+    "415d",
+    "415e",
+    "415f"
+   ]
+  },
+  "renderer_bootstrap_call": {
+   "rva": "0x727424",
+   "insns": [
+    "e8279c4700",
+    "bf01000000",
+    "e8dd04cb00",
+    "e8a879ab00",
+    "e8c3d20300",
+    "e83e3a5b00",
+    "e8b9294900",
+    "e854363d00"
+   ]
+  },
+  "renderer_device_block": {
+   "rva": "0x727687",
+   "insns": [
+    "31ff",
+    "e8523ab100",
+    "488d05bb393901",
+    "4c8b28",
+    "488b03",
+    "4889df",
+    "31f6",
+    "ff5058"
+   ]
+  },
+  "renderer_device_block_end": {
+   "rva": "0x7276F1",
+   "insns": [
+    "4889df",
+    "e897080000",
+    "4c89ef",
+    "e87f28b100",
+    "e80adacf00",
+    "8983c4010000",
+    "e80fdacf00",
+    "8983c8010000"
+   ]
+  },
+  "renderer_resolution_call": {
+   "rva": "0x7276FC",
+   "insns": [
+    "e87f28b100",
+    "e80adacf00",
+    "8983c4010000",
+    "e80fdacf00",
+    "8983c8010000",
+    "4c8d3d3acc3501",
+    "498b3f",
+    "e85a334c00"
+   ]
+  },
+  "renderer_objects_block": {
+   "rva": "0x727726",
+   "insns": [
+    "e825f81100",
+    "bf80000000",
+    "e8cb9e1801",
+    "4989c6",
+    "4889c7",
+    "be01000000",
+    "e8bbe3b000",
+    "4c89b350010000"
+   ]
+  },
+  "renderer_objects_block_end": {
+   "rva": "0x7278B3",
+   "insns": [
+    "bfc0030000",
+    "e8439d1801",
+    "4989c6",
+    "4889c7",
+    "e868a7ab00",
+    "4c89b348010000",
+    "4c89f7",
+    "be01000000"
+   ]
+  },
+  "renderer_late_configure_call": {
+   "rva": "0x7279D0",
+   "insns": [
+    "e81b38b100",
+    "4883c420",
+    "488d35f760beff",
+    "4c8d742420",
+    "4c89f7",
+    "e8037fce00",
+    "4c89f7",
+    "e86b32ce00"
+   ]
+  },
+  "sc3d_context_site": {
+   "rva": "0x72E2AC",
+   "insns": [
+    "498b0424",
+    "4c8bb8c8020000",
+    "4d85ff",
+    "0f84db000000",
+    "e82bce0a00",
+    "4889c7",
+    "e8a38b6f00",
+    "80b8e105000000"
+   ]
+  },
+  "sc3d_context_skip": {
+   "rva": "0x72E39B",
+   "insns": [
+    "4883c410",
+    "5b",
+    "415c",
+    "415e",
+    "415f",
+    "5d",
+    "c3"
+   ]
+  },
+  "sc3d_capability_site": {
+   "rva": "0x7314DB",
+   "insns": [
+    "488b38",
+    "488b07",
+    "ff9098000000",
+    "4989c7",
+    "8bb804010000",
+    "e83badc000",
+    "89c5",
+    "418bbf04010000"
+   ]
+  },
+  "sc3d_capability_skip": {
+   "rva": "0x731738",
+   "insns": [
+    "31c0",
+    "eb07"
+   ]
+  },
+  "sc3d_feature_site": {
+   "rva": "0x725AA7",
+   "insns": [
+    "498b07",
+    "4c89ff",
+    "bed0000000",
+    "ff5078",
+    "84c0",
+    "7424",
+    "498b07",
+    "4c89ff"
+   ]
+  },
+  "sc3d_feature_skip": {
+   "rva": "0x725ADD",
+   "insns": [
+    "c60301",
+    "4d85f6",
+    "7412",
+    "48c7c0ffffffff",
+    "f0490fc14608",
+    "4885c0",
+    "7406",
+    "5b"
+   ]
+  },
+  "invalid_asset_site": {
+   "rva": "0x1246177",
+   "insns": [
+    "41837e0408",
+    "7c04",
+    "4d8b6e08",
+    "488d35de8d0aff",
+    "4c8d642420",
+    "4c89e7",
+    "4c89ea",
+    "31c0"
+   ]
+  },
+  "invalid_asset_resume": {
+   "rva": "0x12463CF",
+   "insns": [
+    "4489f8",
+    "4883c468",
+    "5b",
+    "415c",
+    "415d",
+    "415e",
+    "415f",
+    "5d"
+   ]
+  },
+  "metadata_validity_site": {
+   "rva": "0x11E41D1",
+   "insns": [
+    "84c0",
+    "7543",
+    "4584f6",
+    "743e",
+    "488d35e54412ff",
+    "4c8d742440",
+    "4c89f7",
+    "4889da"
+   ]
+  },
+  "metadata_invalid": {
+   "rva": "0x11E4418",
+   "insns": [
+    "4531f6",
+    "488d7c2410",
+    "e8bbef1600",
+    "4c89f0",
+    "4881c448020000",
+    "5b",
+    "415c",
+    "415d"
+   ]
+  },
+  "metadata_valid_resume": {
+   "rva": "0x11E421D",
+   "insns": [
+    "4c89f7",
+    "e86bf31600",
+    "4989c4",
+    "bf38000000",
+    "e8ced36c00",
+    "4989c7",
+    "4c89f7",
+    "e883f21600"
+   ]
+  },
+  "external_asset_site": {
+   "rva": "0x11F7C44",
+   "insns": [
+    "66c74424060000",
+    "c744243400000000",
+    "488d742406",
+    "ba02000000",
+    "4889df",
+    "e88bb91500",
+    "488d742434",
+    "ba04000000"
+   ]
+  },
+  "external_asset_failure": {
+   "rva": "0x11F8407",
+   "insns": [
+    "488d7c2438",
+    "e8cfaf1500",
+    "4881c4f8000000",
+    "5b",
+    "415c",
+    "415d",
+    "415e",
+    "415f"
+   ]
+  },
+  "ui_locale_call": {
+   "rva": "0x14ABA25",
+   "insns": [
+    "e846486300",
+    "4c89f7",
+    "e83e486300",
+    "4c89ff",
+    "e836486300",
+    "4883c420",
+    "5b",
+    "415e"
+   ]
+  },
+  "home_resolution_site": {
+   "rva": "0xCE8E66",
+   "insns": [
+    "488d05e321dd00",
+    "488b00",
+    "f30f1005e4275cff",
+    "f30f5f80a8010000",
+    "f30f100d402e5cff",
+    "f30f59c8",
+    "f3440f2cf1",
+    "f30f5905ab2b5cff"
+   ]
+  },
+  "home_resolution_resume": {
+   "rva": "0xCE8F2B",
+   "insns": [
+    "488d35fd5461ff",
+    "4c8d6c2408",
+    "4c89ef",
+    "e8b1697200",
+    "4c8d25ba80d700",
+    "4c89e7",
+    "4c89ee",
+    "e87f1e7300"
+   ]
+  },
+  "home_graphics_create_call": {
+   "rva": "0xCE8F5F",
+   "insns": [
+    "e81cc34f00",
+    "488d0525210000",
+    "488d0db608dd00",
+    "488901",
+    "488d35386162ff",
+    "4c8d742408",
+    "4c89f7",
+    "e867697200"
+   ]
+  }
+ },
+ "fields": {
+  "manager.state": "0x20",
+  "manager.state_type": "0x30",
+  "manager.pending_type": "0x34",
+  "manager.replay": "0x78",
+  "manager.flag_10": "0x10",
+  "manager.flag_54": "0x54",
+  "loading.phase": "0x0C",
+  "loading.task": "0x10",
+  "task.tables": "0x0",
+  "task.resources": "0x8",
+  "task.state": "0x10",
+  "task.progress": "0x1C",
+  "resources.count": "0x0C",
+  "tables.complete": "0x6E8",
+  "tables.characters": "0x110",
+  "table.rows": "0x30",
+  "table.count": "0x3C",
+  "row.name": "0x28",
+  "game.context": "0x8",
+  "game.helper": "0x148",
+  "state.battle": "0x90",
+  "battle.tick": "0x60",
+  "battle.logic": "0xA8",
+  "battle.data_tables": "0x208",
+  "logic.left_player": "0xE0",
+  "logic.right_player": "0xE8",
+  "logic.registry": "0x8",
+  "registry.collection": "0x40",
+  "collection.data": "0x8",
+  "collection.count": "0x14",
+  "entity.components": "0x18",
+  "entity.actions": "0x28",
+  "entity.action_count": "0x30",
+  "entity.kind": "0x30",
+  "entity.side": "0x78",
+  "entity.x": "0x7C",
+  "entity.y": "0x80",
+  "entity.card": "0xAC",
+  "health.hp": "0x10",
+  "health.max": "0x14",
+  "health.shield": "0x28",
+  "health.shield_max": "0x2C",
+  "character.status": "0xB0",
+  "character.fold_timer": "0x138",
+  "character.immune_ref": "0x180",
+  "character.immune_timer": "0x1A4",
+  "character.air_count_a": "0x74",
+  "character.air_count_b": "0x8C",
+  "characterdata.folds_a": "0x399",
+  "characterdata.folds_b": "0x39A",
+  "characterdata.hide_time": "0x3E4",
+  "characterdata.dash_immunity": "0x598",
+  "status.hidden_bit": "0x18",
+  "status.air_bit": "0x2D",
+  "status.ground_bit": "0x28",
+  "movement.surface_x": "0x1CC",
+  "movement.surface_y": "0x1D0",
+  "movement.jump_remaining": "0x218",
+  "character.height": "0x8C",
+  "character.invisible_again": "0x1AC",
+  "attack.dash_hop": "0x70",
+  "attack.return_shot": "0x50",
+  "attack.return_elapsed": "0x58",
+  "attack.return_total": "0x5C",
+  "attack.special_cooldown": "0x3C",
+  "characterdata.flying_height": "0x32C",
+  "characterdata.burrow_targetable": "0x5E0",
+  "state.replay_target": "0x10",
+  "logic.player": "0xE0",
+  "logic.identity": "0x30",
+  "logic.deck": "0x88",
+  "identity.account_hi": "0x0",
+  "identity.account_lo": "0x4",
+  "player.elixir_raw": "0x2F8",
+  "player.hand": "0x220",
+  "player.cycle": "0x230",
+  "player.evo_progress": "0x2E8",
+  "deck.slots": "0x20",
+  "deckslot.card_data": "0x10",
+  "data.id": "0x40",
+  "carddata.form_candidates": "0x220",
+  "form.metadata": "0x2A8",
+  "formmeta.code": "0x64",
+  "form.cycle_required": "0x284",
+  "vector.count": "0xC",
+  "entity.id": "0x8",
+  "entity.data": "0x48",
+  "entitydata.global_id": "0x40",
+  "entity.target_x": "0x84",
+  "entity.target_y": "0x88",
+  "entity.component_count": "0x24",
+  "entity.deploy_remaining": "0x15C",
+  "attack.target": "0x10",
+  "attack.stage": "0x20",
+  "attack.timeline": "0x24",
+  "attack.load": "0x28",
+  "movement.charge": "0x1E0",
+  "logic.state": "0x18",
+  "logic.substate": "0x1B0",
+  "substate.value": "0x8",
+  "player.ability_controllers": "0x3A0",
+  "controller.action_data": "0x18",
+  "controller.owner_root": "0x20",
+  "controller.remaining_cooldown": "0x78",
+  "controller.configured_cooldown": "0x7C",
+  "controller.charges": "0x80",
+  "controller.selected_character": "0x90",
+  "controller.button_state": "0x98",
+  "controller.champions": "0xA0",
+  "named.name": "0x28",
+  "character.ability_data": "0x710",
+  "abilitydata.max_charges": "0xAC",
+  "abilitydata.cooldown": "0xB4",
+  "battle.command_queue": "0x38",
+  "logic.finalized": "0x1E0",
+  "logic.result": "0x1B8",
+  "entity.state": "0x11C",
+  "vslot.character_hidden": "0xF8",
+  "buff.entries": "0x18",
+  "buff.count": "0x24",
+  "buff.invisible": "0x34",
+  "buffentry.remaining": "0x8",
+  "buffentry.data": "0x18",
+  "buffentry.source_side": "0x40",
+  "buffdata.hit_speed": "0xE0",
+  "buffdata.speed": "0xE4",
+  "buffdata.spawn_speed": "0xEC",
+  "attack.hit_count": "0x44",
+  "attack.dash_cooldown": "0x40",
+  "characterdata.hit_speed": "0x418",
+  "characterdata.load_time": "0x48C",
+  "controller.effect_delay": "0xAC",
+  "area.remaining": "0x100",
+  "areadata.life": "0x170",
+  "buffentry.total": "0xC",
+  "buffentry.source": "0x38",
+  "controller.used": "0xB0",
+  "vslot.character_air": "0x108",
+  "projectile.source_id": "0xF8",
+  "projectile.z": "0x8C",
+  "projectile.previous_x": "0x84",
+  "projectile.previous_y": "0x88",
+  "projectile.aim_x": "0x120",
+  "projectile.aim_y": "0x124",
+  "projectile.aim_object": "0x108",
+  "projectile.start_x": "0x12C",
+  "projectile.start_y": "0x130",
+  "tables.buffs": "0x48",
+  "movement.pushed": "0x214",
+  "movement.push_remaining": "0x1EC",
+  "entity.spawn_timer": "0x144",
+  "characterdata.spawn_character": "0x230",
+  "characterdata.death_spawn": "0x360",
+  "characterdata.death_projectile": "0x378",
+  "tower.action_runner": "0x270",
+  "burstaction.charges": "0x60"
+ },
+ "character_fields": {
+  "Speed": "0x414",
+  "HitSpeed": "0x418",
+  "Range": "0x420",
+  "SightRange": "0x434",
+  "LoadTime": "0x48C",
+  "DeployTime": "0x490",
+  "CollisionRadius": "0x4E4",
+  "Mass": "0x4EC",
+  "Hitpoints": "0x7A8",
+  "Damage": "0x7B0"
+ },
+ "command_types": {
+  "play_card": 86,
+  "ability": 2
+ }
+}

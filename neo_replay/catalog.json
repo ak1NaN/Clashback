@@ -1,0 +1,2047 @@
+{
+  "source": "Installed build 160635001; native CSV row IDs and hero TOML declarations",
+  "cards": [
+    {
+      "id": 26000000,
+      "name": "Knight",
+      "aliases": [
+        "imagechrknightpng",
+        "knight",
+        "tidspellknight"
+      ],
+      "rarity": "Common",
+      "hero": true,
+      "cost": "3"
+    },
+    {
+      "id": 26000001,
+      "name": "Archer",
+      "aliases": [
+        "archer",
+        "archers",
+        "imagechrarcherspng",
+        "tidspellarchers"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000002,
+      "name": "Goblins",
+      "aliases": [
+        "goblins",
+        "imagechrgoblinspng",
+        "tidspellgoblins"
+      ],
+      "rarity": "Common",
+      "hero": true,
+      "cost": "2"
+    },
+    {
+      "id": 26000003,
+      "name": "Giant",
+      "aliases": [
+        "giant",
+        "imagechrgiantpng",
+        "tidspellgiant"
+      ],
+      "rarity": "Rare",
+      "hero": true,
+      "cost": "5"
+    },
+    {
+      "id": 26000004,
+      "name": "Pekka",
+      "aliases": [
+        "imagechrpekkadlpng",
+        "pekka",
+        "pekkadl",
+        "tidspellpekka"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "7"
+    },
+    {
+      "id": 26000005,
+      "name": "Minions",
+      "aliases": [
+        "imagechrminionspng",
+        "minion",
+        "minions",
+        "tidspellminions"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000006,
+      "name": "Balloon",
+      "aliases": [
+        "balloon",
+        "balloondl",
+        "chrballoon",
+        "imagechrballoondlpng",
+        "tidspellballoon"
+      ],
+      "rarity": "Epic",
+      "hero": true,
+      "cost": "5"
+    },
+    {
+      "id": 26000007,
+      "name": "Witch",
+      "aliases": [
+        "imagechrwitchdlpng",
+        "tidspellwitch",
+        "witch",
+        "witchdl"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 26000008,
+      "name": "Barbarians",
+      "aliases": [
+        "barbariancard",
+        "barbarians",
+        "barbariansdl",
+        "imagechrbarbariansdlpng",
+        "tidspellbarbarians"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 26000009,
+      "name": "Golem",
+      "aliases": [
+        "chrgolem",
+        "golem",
+        "golemdl",
+        "imagechrgolemdlpng",
+        "tidspellgolem"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "8"
+    },
+    {
+      "id": 26000010,
+      "name": "Skeletons",
+      "aliases": [
+        "imagechrskeletonsdlpng",
+        "skeletons",
+        "skeletonscard",
+        "skeletonsdl",
+        "tidspellskeletons"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "1"
+    },
+    {
+      "id": 26000011,
+      "name": "Valkyrie",
+      "aliases": [
+        "imagechrvalkyriedlpng",
+        "tidspellvalkyrie",
+        "valkyrie",
+        "valkyriedl"
+      ],
+      "rarity": "Rare",
+      "hero": true,
+      "cost": "4"
+    },
+    {
+      "id": 26000012,
+      "name": "SkeletonArmy",
+      "aliases": [
+        "imagechrskeletonarmydlpng",
+        "skeletonarmy",
+        "skeletonarmydl",
+        "skeletonhorde",
+        "tidspellskeletonhorde"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000013,
+      "name": "Bomber",
+      "aliases": [
+        "bomber",
+        "bomberdl",
+        "imagechrbomberdlpng",
+        "tidspellbomber"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "2"
+    },
+    {
+      "id": 26000014,
+      "name": "Musketeer",
+      "aliases": [
+        "imagechrmusketeerdlpng",
+        "musketeer",
+        "musketeercard",
+        "musketeerdl",
+        "tidspellmusketeer"
+      ],
+      "rarity": "Rare",
+      "hero": true,
+      "cost": "4"
+    },
+    {
+      "id": 26000015,
+      "name": "BabyDragon",
+      "aliases": [
+        "babydragon",
+        "babydragondl",
+        "imagechrbabydragondlpng",
+        "tidspellbabydragon"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000016,
+      "name": "Prince",
+      "aliases": [
+        "imagechrprincedlpng",
+        "prince",
+        "princedl",
+        "tidspellprince"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 26000017,
+      "name": "Wizard",
+      "aliases": [
+        "imagechrwizarddlpng",
+        "tidspellwizard",
+        "wizard",
+        "wizarddl"
+      ],
+      "rarity": "Rare",
+      "hero": true,
+      "cost": "5"
+    },
+    {
+      "id": 26000018,
+      "name": "MiniPekka",
+      "aliases": [
+        "imagechrminipekkapng",
+        "minipekka",
+        "tidspellminipekka"
+      ],
+      "rarity": "Rare",
+      "hero": true,
+      "cost": "4"
+    },
+    {
+      "id": 26000019,
+      "name": "SpearGoblins",
+      "aliases": [
+        "goblinarcher",
+        "imagechrspeargoblinspng",
+        "speargoblins",
+        "tidspellspeargoblins"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "2"
+    },
+    {
+      "id": 26000020,
+      "name": "GiantSkeleton",
+      "aliases": [
+        "giantskeleton",
+        "giantskeletondl",
+        "imagechrgiantskeletondlpng",
+        "tidspellgiantskeleton"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "6"
+    },
+    {
+      "id": 26000021,
+      "name": "HogRider",
+      "aliases": [
+        "hogrider",
+        "hogriderdl",
+        "imagechrhogriderdlpng",
+        "tidspellhogrider"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000022,
+      "name": "MinionHorde",
+      "aliases": [
+        "imagechrminionshordedlpng",
+        "minionhorde",
+        "minionshordedl",
+        "tidspellminionhorde"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 26000023,
+      "name": "IceWizard",
+      "aliases": [
+        "icewizard",
+        "icewizarddl",
+        "imagechricewizarddlpng",
+        "tidspellicewizard"
+      ],
+      "rarity": "Legendary",
+      "hero": true,
+      "cost": "3"
+    },
+    {
+      "id": 26000024,
+      "name": "RoyalGiant",
+      "aliases": [
+        "imagechrroyalgiantdlpng",
+        "royalgiant",
+        "royalgiantdl",
+        "tidspellroyalgiant"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "6"
+    },
+    {
+      "id": 26000025,
+      "name": "SkeletonWarriors",
+      "aliases": [
+        "guards",
+        "guardsdl",
+        "imagechrguardsdlpng",
+        "skeletonwarriors",
+        "tidspellskeletonwarriors"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000026,
+      "name": "Princess",
+      "aliases": [
+        "imagechrprincessdlpng",
+        "princess",
+        "princessdl",
+        "tidspellprincess"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000027,
+      "name": "DarkPrince",
+      "aliases": [
+        "darkprince",
+        "darkprincedl",
+        "imagechrdarkprincedlpng",
+        "tidspelldarkprince"
+      ],
+      "rarity": "Epic",
+      "hero": true,
+      "cost": "4"
+    },
+    {
+      "id": 26000028,
+      "name": "ThreeMusketeers",
+      "aliases": [
+        "imagechrthreemusketeerspng",
+        "threemusketeercard",
+        "threemusketeers",
+        "tidspellthreemusketeers"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "9"
+    },
+    {
+      "id": 26000029,
+      "name": "LavaHound",
+      "aliases": [
+        "imagechrlavahounddlpng",
+        "lavahound",
+        "lavahounddl",
+        "tidspelllavahound"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "7"
+    },
+    {
+      "id": 26000030,
+      "name": "IceSpirits",
+      "aliases": [
+        "icespirit",
+        "icespiritdl",
+        "icespirits",
+        "imagechricespiritdlpng",
+        "snowspirits",
+        "tidspellicespirits"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "1"
+    },
+    {
+      "id": 26000031,
+      "name": "FireSpirits",
+      "aliases": [
+        "firespirit",
+        "firespirits",
+        "imagechrfirespiritpng",
+        "tidspellfirespirits"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "1"
+    },
+    {
+      "id": 26000032,
+      "name": "Miner",
+      "aliases": [
+        "imagechrminerdlpng",
+        "miner",
+        "minerdl",
+        "tidspellminer"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000033,
+      "name": "ZapMachine",
+      "aliases": [
+        "imagechrsparkydlpng",
+        "sparky",
+        "sparkydl",
+        "tidspellzapmachine",
+        "zapmachine"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "6"
+    },
+    {
+      "id": 26000034,
+      "name": "Bowler",
+      "aliases": [
+        "bowler",
+        "bowlerdl",
+        "imagechrbowlerdlpng",
+        "tidspellbowler"
+      ],
+      "rarity": "Epic",
+      "hero": true,
+      "cost": "5"
+    },
+    {
+      "id": 26000035,
+      "name": "RageBarbarian",
+      "aliases": [
+        "imagechrlumberjackdlpng",
+        "lumberjack",
+        "lumberjackdl",
+        "ragebarbarian",
+        "tidspellragebarbarian"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000036,
+      "name": "BattleRam",
+      "aliases": [
+        "battleram",
+        "battleramdl",
+        "imagechrbattleramdlpng",
+        "tidspellbattleram"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000037,
+      "name": "InfernoDragon",
+      "aliases": [
+        "imagechrinfernodragondlpng",
+        "infernodragon",
+        "infernodragondl",
+        "tidspellinfernodragon"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000038,
+      "name": "IceGolemite",
+      "aliases": [
+        "icegolem",
+        "icegolemdl",
+        "icegolemite",
+        "imagechricegolemdlpng",
+        "tidspellicegolemite"
+      ],
+      "rarity": "Rare",
+      "hero": true,
+      "cost": "2"
+    },
+    {
+      "id": 26000039,
+      "name": "MegaMinion",
+      "aliases": [
+        "imagechrmegaminiondlpng",
+        "megaminion",
+        "megaminioncard",
+        "megaminiondl",
+        "tidspellmegaminion"
+      ],
+      "rarity": "Rare",
+      "hero": true,
+      "cost": "3"
+    },
+    {
+      "id": 26000040,
+      "name": "BlowdartGoblin",
+      "aliases": [
+        "blowdartgoblin",
+        "dartgoblin",
+        "dartgoblindl",
+        "imagechrdartgoblindlpng",
+        "tidspellblowdartgoblin"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000041,
+      "name": "GoblinGang",
+      "aliases": [
+        "goblingang",
+        "goblinsgangdl",
+        "imagechrgoblinsgangdlpng",
+        "tidspellgoblingang"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000042,
+      "name": "ElectroWizard",
+      "aliases": [
+        "electrowizard",
+        "electrowizarddl",
+        "imagechrelectrowizarddlpng",
+        "tidspellelectrowizard"
+      ],
+      "rarity": "Legendary",
+      "hero": true,
+      "cost": "4"
+    },
+    {
+      "id": 26000043,
+      "name": "AngryBarbarians",
+      "aliases": [
+        "angrybarbarian",
+        "angrybarbarians",
+        "elitebarbarians",
+        "elitebarbariansdl",
+        "imagechrelitebarbariansdlpng",
+        "tidspellangrybarbarians"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "6"
+    },
+    {
+      "id": 26000044,
+      "name": "Hunter",
+      "aliases": [
+        "hunter",
+        "hunterdl",
+        "imagechrhunterdlpng",
+        "tidspellhunter"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000045,
+      "name": "AxeMan",
+      "aliases": [
+        "axeman",
+        "executioner",
+        "executionerdl",
+        "imagechrexecutionerdlpng",
+        "tidspellaxeman"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 26000046,
+      "name": "Assassin",
+      "aliases": [
+        "assassin",
+        "bandit",
+        "bandit2026card",
+        "banditdl",
+        "imagechrbanditdlpng",
+        "tidspellassassin"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000047,
+      "name": "RoyalRecruits",
+      "aliases": [
+        "imagechrroyalrecruitsdlpng",
+        "royalrecruits",
+        "royalrecruitsdl",
+        "tidspellguardbattalion"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "7"
+    },
+    {
+      "id": 26000048,
+      "name": "DarkWitch",
+      "aliases": [
+        "darkwitch",
+        "imagechrnightwitchdlpng",
+        "nightwitch",
+        "nightwitchdl",
+        "tidspelldarkwitch"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000049,
+      "name": "Bats",
+      "aliases": [
+        "bats",
+        "batsdl",
+        "imagechrbatsdlpng",
+        "tidspellbats"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "2"
+    },
+    {
+      "id": 26000050,
+      "name": "Ghost",
+      "aliases": [
+        "ghost",
+        "imagechrroyalghostdlpng",
+        "royalghost",
+        "royalghostdl",
+        "tidspellghost"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000051,
+      "name": "RamRider",
+      "aliases": [
+        "imagechrramriderdlpng",
+        "ramrider",
+        "ramriderdl",
+        "tidspellramrider"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 26000052,
+      "name": "MiniSparkys",
+      "aliases": [
+        "imagechrzappiesdlpng",
+        "minisparkys",
+        "tidspellminizapmachine",
+        "zappies",
+        "zappiesdl"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000053,
+      "name": "Rascals",
+      "aliases": [
+        "imagechrrascalsdlpng",
+        "rascals",
+        "rascalsdl",
+        "tidspellhoodedgang"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 26000054,
+      "name": "MovingCannon",
+      "aliases": [
+        "cannoncart",
+        "cannoncartdl",
+        "imagechrcannoncartdlpng",
+        "movingcannon",
+        "tidspellmovingcannon"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 26000055,
+      "name": "MegaKnight",
+      "aliases": [
+        "imagechrmegaknightdlpng",
+        "megaknight",
+        "megaknightdl",
+        "tidspellmegaknight"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "7"
+    },
+    {
+      "id": 26000056,
+      "name": "SkeletonBalloon",
+      "aliases": [
+        "imagechrskeletonbarreldlpng",
+        "skeletonballoon",
+        "skeletonbarrel",
+        "skeletonbarreldl",
+        "tidspellskeletonballoon"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000057,
+      "name": "DartBarrell",
+      "aliases": [
+        "dartbarrell",
+        "flyingmachine",
+        "flyingmachinedl",
+        "imagechrflyingmachinedlpng",
+        "tidspelldartbarrell"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000058,
+      "name": "Wallbreakers",
+      "aliases": [
+        "imagechrwallbreakersdlpng",
+        "tidspellwallbreakers",
+        "wallbreaker",
+        "wallbreakers",
+        "wallbreakersdl"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "2"
+    },
+    {
+      "id": 26000059,
+      "name": "RoyalHogs",
+      "aliases": [
+        "imagechrroyalhogsdlpng",
+        "royalhog",
+        "royalhogs",
+        "royalhogsdl",
+        "tidspellroyalhogs"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 26000060,
+      "name": "GoblinGiant",
+      "aliases": [
+        "goblingiant",
+        "goblingiantdl",
+        "imagechrgoblingiantdlpng",
+        "tidspellgoblingiant"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "6"
+    },
+    {
+      "id": 26000061,
+      "name": "Fisherman",
+      "aliases": [
+        "fisherman",
+        "fishermandl",
+        "imagechrfishermandlpng",
+        "tidspellfisherman"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000062,
+      "name": "EliteArcher",
+      "aliases": [
+        "elitearcher",
+        "imagechrmagicarcherdlpng",
+        "magicarcher",
+        "magicarcherdl",
+        "tidspellelitearcher"
+      ],
+      "rarity": "Legendary",
+      "hero": true,
+      "cost": "4"
+    },
+    {
+      "id": 26000063,
+      "name": "ElectroDragon",
+      "aliases": [
+        "electrodragon",
+        "electrodragondl",
+        "imagechrelectrodragondlpng",
+        "tidspellelectrodragon"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 26000064,
+      "name": "Firecracker",
+      "aliases": [
+        "firecracker",
+        "firecrackerdl",
+        "imagechrfirecrackerdlpng",
+        "tidspellfirecracker"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000065,
+      "name": "MightyMiner",
+      "aliases": [
+        "championhiresmightyminerdl",
+        "imagechrchampionschampionhiresmightyminerdlpng",
+        "mightyminer",
+        "tidspellmightyminer"
+      ],
+      "rarity": "Champion",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000066,
+      "name": "SuperWitch",
+      "aliases": [
+        "imagechrwitchdlpng",
+        "superwitch",
+        "tidspellsuperwitch",
+        "witchdl"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "6"
+    },
+    {
+      "id": 26000067,
+      "name": "ElixirGolem",
+      "aliases": [
+        "elixirgolem",
+        "elixirgolemdl",
+        "imagechrelixirgolemdlpng",
+        "tidspellelixirgolem"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000068,
+      "name": "BattleHealer",
+      "aliases": [
+        "battlehealer",
+        "battlehealerdl",
+        "imagechrbattlehealerdlpng",
+        "tidspellbattlehealer"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000069,
+      "name": "SkeletonKing",
+      "aliases": [
+        "championhiresskeletonkingdl",
+        "imagechrchampionschampionhiresskeletonkingdlpng",
+        "skeletonking",
+        "tidspellskeletonking"
+      ],
+      "rarity": "Champion",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000070,
+      "name": "SuperLavaHound",
+      "aliases": [
+        "imagechrlavahounddlpng",
+        "lavahounddl",
+        "superlavahound",
+        "tidspellsuperlavahound"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "8"
+    },
+    {
+      "id": 26000071,
+      "name": "SuperEliteArcher",
+      "aliases": [
+        "imagechrmagicarcherdlpng",
+        "magicarcherdl",
+        "superelitearcher",
+        "supermagicarcher",
+        "tidspellsuperelitearcher"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 26000072,
+      "name": "ArcherQueen",
+      "aliases": [
+        "archerqueen",
+        "championhiresarcherqueendl",
+        "imagechrchampionschampionhiresarcherqueendlpng",
+        "tidspellarcherqueen"
+      ],
+      "rarity": "Champion",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 26000073,
+      "name": "SuperHogRider",
+      "aliases": [
+        "hogriderdl",
+        "imagechrhogriderdlpng",
+        "superhogrider",
+        "tidspellsuperhogrider"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 26000074,
+      "name": "GoldenKnight",
+      "aliases": [
+        "championhiresgoldenknightdl",
+        "goldenknight",
+        "imagechrchampionschampionhiresgoldenknightdlpng",
+        "tidspellgoldenknight"
+      ],
+      "rarity": "Champion",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000075,
+      "name": "SuperIceGolemite",
+      "aliases": [
+        "icegolemdl",
+        "imagechricegolemdlpng",
+        "supericegolem",
+        "supericegolemite",
+        "tidspellsupericegolemite"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000076,
+      "name": "CHAR_DISABLED_1",
+      "aliases": [
+        "chardisabled1",
+        "knight",
+        "tidspellknight"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000077,
+      "name": "Monk",
+      "aliases": [
+        "championhiresmonkdl",
+        "imagechrchampionschampionhiresmonkdlpng",
+        "monk",
+        "tidspellmonk"
+      ],
+      "rarity": "Champion",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 26000078,
+      "name": "SuperArcher",
+      "aliases": [
+        "archers",
+        "imagechrarcherspng",
+        "superarcher",
+        "tidspellsuperarchers"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000079,
+      "name": "RoyalRecruits_Chess",
+      "aliases": [
+        "imagechrroyalrecruitsdlpng",
+        "royalrecruits",
+        "royalrecruitschess",
+        "royalrecruitsdl",
+        "tidspellguardbattalion"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "7"
+    },
+    {
+      "id": 26000080,
+      "name": "SkeletonDragons",
+      "aliases": [
+        "imagechrskeletondragondlpng",
+        "skeletondragon",
+        "skeletondragondl",
+        "skeletondragons",
+        "tidspellskeletondragons"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000081,
+      "name": "SuperHogRiderTerry",
+      "aliases": [
+        "hogriderchampion",
+        "hogriderdl",
+        "imagechrhogriderdlpng",
+        "superhogriderterry",
+        "tidspellsuperhogriderterry"
+      ],
+      "rarity": "Champion",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000082,
+      "name": "SuperMiniPekka",
+      "aliases": [
+        "imagechrminipekkapng",
+        "minipekka",
+        "superminipekka",
+        "tidspellsuperminipekka"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 26000083,
+      "name": "WitchMother",
+      "aliases": [
+        "imagechrmotherwitchdlpng",
+        "motherwitch",
+        "motherwitchdl",
+        "tidspellwitchmother",
+        "witchmother"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000084,
+      "name": "ElectroSpirit",
+      "aliases": [
+        "electrospirit",
+        "electrospiritdl",
+        "imagechrelectrospiritdlpng",
+        "tidspellelectrospirit"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "1"
+    },
+    {
+      "id": 26000085,
+      "name": "ElectroGiant",
+      "aliases": [
+        "electrogiant",
+        "electrogiantdl",
+        "imagechrelectrogiantdlpng",
+        "tidspellelectrogiant"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "7"
+    },
+    {
+      "id": 26000086,
+      "name": "PrinceBuff",
+      "aliases": [
+        "imagechrprincedlpng",
+        "prince",
+        "princebuff",
+        "princedl",
+        "tidspellprincebuff"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 26000087,
+      "name": "Phoenix",
+      "aliases": [
+        "imagechrphoenixdlpng",
+        "phoenix",
+        "phoenixdl",
+        "tidspellphoenix"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000088,
+      "name": "CHAR_DISABLED_3",
+      "aliases": [
+        "chardisabled3",
+        "prototypesspellscard",
+        "tidspellknight"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000089,
+      "name": "CHAR_DISABLED_4",
+      "aliases": [
+        "chardisabled4",
+        "prototypeslegendarycard",
+        "tidspellknight"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000090,
+      "name": "CHAR_DISABLED_5",
+      "aliases": [
+        "chardisabled5",
+        "prototypeslegendarycard",
+        "tidspellknight"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000091,
+      "name": "CHAR_DISABLED_6",
+      "aliases": [
+        "chardisabled6",
+        "prototypesgenericcard",
+        "tidspellknight"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000092,
+      "name": "CHAR_DISABLED_7",
+      "aliases": [
+        "chardisabled7",
+        "prototypesbuildingcard",
+        "tidspellknight"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000093,
+      "name": "LittlePrince",
+      "aliases": [
+        "championhireslittleprincedl",
+        "imagechrchampionschampionhireslittleprincedlpng",
+        "littleprince",
+        "tidspelllittleprince"
+      ],
+      "rarity": "Champion",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000094,
+      "name": "TriWizards",
+      "aliases": [
+        "tidspelltriwizard",
+        "triwizards"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "7"
+    },
+    {
+      "id": 26000095,
+      "name": "GoblinDemolisher",
+      "aliases": [
+        "goblindemolisher",
+        "goblindemolisherdl",
+        "imagechrgoblinfactiongoblindemolisherdlpng",
+        "tidspellgoblindemolisher"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000096,
+      "name": "GoblinMachine",
+      "aliases": [
+        "goblinmachine",
+        "goblinmachinedl",
+        "imagechrgoblinfactiongoblinmachinedlpng",
+        "tidspellgoblinmachine"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 26000097,
+      "name": "SuspiciousBush",
+      "aliases": [
+        "goblinbushdl",
+        "imagechrgoblinfactiongoblinbushdlpng",
+        "suspiciousbush",
+        "tidspellsuspiciousbush"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "2"
+    },
+    {
+      "id": 26000098,
+      "name": "SuperKnight",
+      "aliases": [
+        "imagechrknightpng",
+        "knight",
+        "superknight",
+        "tidspellsuperknight"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000099,
+      "name": "Goblinstein",
+      "aliases": [
+        "championhiresgoblinstein",
+        "goblinstein",
+        "goblinsteincard",
+        "imagechrchampionschampionhiresgoblinsteinpng",
+        "tidspellgoblinstein"
+      ],
+      "rarity": "Champion",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 26000100,
+      "name": "SkeletonWarriors_SpookyChess",
+      "aliases": [
+        "guardsdl",
+        "imagechrguardsdlpng",
+        "skeletonwarriors",
+        "skeletonwarriorsspookychess",
+        "tidspellguardbattalion"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "7"
+    },
+    {
+      "id": 26000101,
+      "name": "GiantBuffer",
+      "aliases": [
+        "buffgiantcard",
+        "buffgiantdl",
+        "giantbuffer",
+        "imagechrbuffgiantdlpng",
+        "runegiant",
+        "tidspellgiantbuffer"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 26000102,
+      "name": "Berserker",
+      "aliases": [
+        "berserker",
+        "berserkercard",
+        "berserkerdl",
+        "imagechrberserkerdlpng",
+        "tidspellberserker"
+      ],
+      "rarity": "Common",
+      "hero": true,
+      "cost": "2"
+    },
+    {
+      "id": 26000103,
+      "name": "BossBandit",
+      "aliases": [
+        "bossbandit",
+        "bossbanditcard",
+        "championhiresbossbandit",
+        "imagechrchampionschampionhiresbossbanditpng",
+        "tidspellbossbandit"
+      ],
+      "rarity": "Champion",
+      "hero": false,
+      "cost": "6"
+    },
+    {
+      "id": 26000104,
+      "name": "MergeMaiden_Normal",
+      "aliases": [
+        "imagechrmergemaidenpng",
+        "mergemaiden",
+        "mergemaidencard",
+        "mergemaidennormal",
+        "tidspellmergemaidenground"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 26000105,
+      "name": "MergeMaiden_Mounted",
+      "aliases": [
+        "imagechrmergemaidendragonpng",
+        "mergemaidendragon",
+        "mergemaidendragoncard",
+        "mergemaidenmounted",
+        "tidspellmergemaiden"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "6"
+    },
+    {
+      "id": 26000106,
+      "name": "Ronin",
+      "aliases": [
+        "prototypesgenericcard",
+        "ronin",
+        "tidspellronin"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 26000107,
+      "name": "MinionGiant",
+      "aliases": [
+        "miniongiant",
+        "prototypesgenericcard",
+        "tidspellminiongiant"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 27000000,
+      "name": "Cannon",
+      "aliases": [
+        "cannon",
+        "cannondl",
+        "chaoscannon",
+        "imagechrcannondlpng",
+        "tidspellcannon"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 27000001,
+      "name": "GoblinHut",
+      "aliases": [
+        "goblinhut",
+        "goblinhutdl",
+        "goblinhutreworkcard",
+        "imagechrgoblinhutdlpng",
+        "tidspellgoblinhut"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 27000002,
+      "name": "Mortar",
+      "aliases": [
+        "buildingmortar",
+        "imagechrmortardlpng",
+        "mortar",
+        "mortardl",
+        "tidspellmortar"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 27000003,
+      "name": "InfernoTower",
+      "aliases": [
+        "buildinginferno",
+        "imagechrinfernotowerpng",
+        "infernotower",
+        "tidspellinferno"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 27000004,
+      "name": "BombTower",
+      "aliases": [
+        "bombtower",
+        "bombtowerdl",
+        "imagechrbombtowerdlpng",
+        "tidspellbombtower"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 27000005,
+      "name": "BarbarianHut",
+      "aliases": [
+        "barbarianhut",
+        "tidspellbarbarianhut"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "6"
+    },
+    {
+      "id": 27000006,
+      "name": "Tesla",
+      "aliases": [
+        "buildingtesla",
+        "imagechrtesladlpng",
+        "tesla",
+        "tesladl",
+        "tidspelltesla"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 27000007,
+      "name": "Elixir Collector",
+      "aliases": [
+        "buildingelixircollector",
+        "elixircollector",
+        "elixirpump",
+        "imagechrelixirpumppng",
+        "tidspellelixircollector"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "6"
+    },
+    {
+      "id": 27000008,
+      "name": "Xbow",
+      "aliases": [
+        "buildingxbow",
+        "imagechrxbowpng",
+        "tidspellxbow",
+        "xbow"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "6"
+    },
+    {
+      "id": 27000009,
+      "name": "Tombstone",
+      "aliases": [
+        "imagechrtombstonedlpng",
+        "tidspelltombstone",
+        "tombstone",
+        "tombstonedl"
+      ],
+      "rarity": "Rare",
+      "hero": true,
+      "cost": "3"
+    },
+    {
+      "id": 27000010,
+      "name": "FirespiritHut",
+      "aliases": [
+        "firespirithut",
+        "furnace",
+        "furnacecard",
+        "imagechrfurnacepng",
+        "tidspellfirespirithut"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 27000011,
+      "name": "BarbarianLauncher",
+      "aliases": [
+        "barbarianlauncher",
+        "imagechrmortardlpng",
+        "mortardl",
+        "tidspellbarbarianlauncher"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 27000012,
+      "name": "GoblinCage",
+      "aliases": [
+        "goblincage",
+        "imagechrgoblincagepng",
+        "tidspellgoblincage"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 27000013,
+      "name": "GoblinDrill",
+      "aliases": [
+        "goblindrill",
+        "goblindrilldl",
+        "imagechrgoblindrilldlpng",
+        "tidspellgoblindrill"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 27000014,
+      "name": "GoblinPartyHut",
+      "aliases": [
+        "goblinhutdl",
+        "goblinpartyhut",
+        "imagechrgoblinhutdlpng",
+        "partyhut",
+        "tidspellgoblinhutparty"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 27000015,
+      "name": "DarkElixir_Bottle",
+      "aliases": [
+        "darkelixirbottle",
+        "poison",
+        "tidspellcannon"
+      ],
+      "rarity": "Champion",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 27000016,
+      "name": "ElixirBarrel",
+      "aliases": [
+        "buildingelixircollector",
+        "elixirbarrel",
+        "tidspellelixircollector"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "6"
+    },
+    {
+      "id": 27000017,
+      "name": "GoblinRocketSilo",
+      "aliases": [
+        "goblinrocketsilo",
+        "partyrocket",
+        "tidspellrocketsilo"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "7"
+    },
+    {
+      "id": 28000000,
+      "name": "Fireball",
+      "aliases": [
+        "fireball",
+        "firefireball",
+        "imagechrfireballpng",
+        "tidspellfireball"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 28000001,
+      "name": "Arrows",
+      "aliases": [
+        "arrows",
+        "imagechrarrowspng",
+        "ordervolley",
+        "tidspellarrows"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 28000002,
+      "name": "Rage",
+      "aliases": [
+        "imagechrragepng",
+        "rage",
+        "tidspellrage"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "2"
+    },
+    {
+      "id": 28000003,
+      "name": "Rocket",
+      "aliases": [
+        "imagechrrocketdlpng",
+        "rocket",
+        "rocketdl",
+        "tidspellrocket"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "6"
+    },
+    {
+      "id": 28000004,
+      "name": "GoblinBarrel",
+      "aliases": [
+        "goblinbarrel",
+        "goblinbarreldl",
+        "imagechrgoblinbarreldlpng",
+        "tidspellgoblinbarrel"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 28000005,
+      "name": "Freeze",
+      "aliases": [
+        "freeze",
+        "imagechrfreezepng",
+        "tidspellfreeze"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 28000006,
+      "name": "Mirror",
+      "aliases": [
+        "imagechrmirrordlpng",
+        "mirror",
+        "mirrordl",
+        "tidspellmirror"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "1"
+    },
+    {
+      "id": 28000007,
+      "name": "Lightning",
+      "aliases": [
+        "imagechrlightningpng",
+        "lightning",
+        "tidspelllightning"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "6"
+    },
+    {
+      "id": 28000008,
+      "name": "Zap",
+      "aliases": [
+        "imagechrzapdlpng",
+        "tidspellzap",
+        "zap",
+        "zapdl"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "2"
+    },
+    {
+      "id": 28000009,
+      "name": "Poison",
+      "aliases": [
+        "imagechrpoisonpng",
+        "poison",
+        "tidspellpoison"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "4"
+    },
+    {
+      "id": 28000010,
+      "name": "Graveyard",
+      "aliases": [
+        "graveyard",
+        "graveyarddl",
+        "imagechrgraveyarddlpng",
+        "tidspellgraveyard"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 28000011,
+      "name": "Log",
+      "aliases": [
+        "imagechrthelogdlpng",
+        "log",
+        "thelog",
+        "thelogdl",
+        "tidspelllog"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "2"
+    },
+    {
+      "id": 28000012,
+      "name": "Tornado",
+      "aliases": [
+        "imagechrtornadodlpng",
+        "tidspelltornado",
+        "tornado",
+        "tornadodl"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 28000013,
+      "name": "Clone",
+      "aliases": [
+        "clone",
+        "clonedl",
+        "copy",
+        "imagechrclonedlpng",
+        "tidspellclone"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 28000014,
+      "name": "Earthquake",
+      "aliases": [
+        "earthquake",
+        "earthquakedl",
+        "imagechrearthquakedlpng",
+        "tidspellearthquake"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 28000015,
+      "name": "BarbLog",
+      "aliases": [
+        "barbarianbarrel",
+        "barbarianbarreldl",
+        "barbbarrel",
+        "barblog",
+        "imagechrbarbarianbarreldlpng",
+        "tidspellbarbarianlog"
+      ],
+      "rarity": "Epic",
+      "hero": true,
+      "cost": "2"
+    },
+    {
+      "id": 28000016,
+      "name": "Heal",
+      "aliases": [
+        "heal",
+        "healspirit",
+        "healspiritdl",
+        "imagechrhealspiritdlpng",
+        "tidspellhealspirit"
+      ],
+      "rarity": "Rare",
+      "hero": false,
+      "cost": "1"
+    },
+    {
+      "id": 28000017,
+      "name": "Snowball",
+      "aliases": [
+        "giantsnowball",
+        "snowball",
+        "tidspellsnowball"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "2"
+    },
+    {
+      "id": 28000018,
+      "name": "RoyalDelivery",
+      "aliases": [
+        "imagechrroyaldeliverydlpng",
+        "royaldelivery",
+        "royaldeliverydl",
+        "tidspellroyaldelivery"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 28000019,
+      "name": "GlobalClone",
+      "aliases": [
+        "clonedl",
+        "copy",
+        "globalclone",
+        "imagechrclonedlpng",
+        "tidspellclone"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "3"
+    },
+    {
+      "id": 28000020,
+      "name": "GoblinPartyRocket",
+      "aliases": [
+        "goblinpartyrocket",
+        "imagechrrocketdlpng",
+        "partyrocketv2",
+        "rocketdl",
+        "tidspellgoblinpartyrocket"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 28000021,
+      "name": "WarmSpell",
+      "aliases": [
+        "tidspellwarm",
+        "warmspell",
+        "warmthspell"
+      ],
+      "rarity": "Common",
+      "hero": false,
+      "cost": "1"
+    },
+    {
+      "id": 28000022,
+      "name": "GlobalLightning",
+      "aliases": [
+        "globallightning",
+        "lightning",
+        "tidspelllightning"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "1"
+    },
+    {
+      "id": 28000023,
+      "name": "DarkMagic",
+      "aliases": [
+        "darkmagic",
+        "darkspell",
+        "darkspelldl",
+        "imagechrdarkspelldlpng",
+        "tidspelldarkmagic",
+        "void"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "5"
+    },
+    {
+      "id": 28000024,
+      "name": "GoblinCurse",
+      "aliases": [
+        "goblincurse",
+        "goblincursedl",
+        "imagechrgoblinfactiongoblincursedlpng",
+        "tidspellgoblincurse"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "2"
+    },
+    {
+      "id": 28000025,
+      "name": "MergeMaiden",
+      "aliases": [
+        "imagechrmergemaidendragonpng",
+        "mergemaiden",
+        "mergemaidendragon",
+        "mergemaidendragoncard",
+        "spiritempress",
+        "tidspellmergemaiden"
+      ],
+      "rarity": "Legendary",
+      "hero": false,
+      "cost": "6"
+    },
+    {
+      "id": 28000026,
+      "name": "Vines",
+      "aliases": [
+        "imagechrvinesdlpng",
+        "tidspellvines",
+        "vines",
+        "vinesdl",
+        "vinesspell"
+      ],
+      "rarity": "Epic",
+      "hero": false,
+      "cost": "3"
+    }
+  ],
+  "heroes": {
+    "26000006": "balloon",
+    "28000015": "barbarian-barrel",
+    "26000102": "berserker",
+    "26000034": "bowler",
+    "26000027": "dark-prince",
+    "26000062": "magic-archer",
+    "26000003": "giant",
+    "26000002": "goblins",
+    "26000038": "ice-golem",
+    "26000000": "knight",
+    "26000039": "mega-minion",
+    "26000018": "mini-pekka",
+    "26000014": "musketeer",
+    "27000009": "tombstone",
+    "26000011": "valkyrie",
+    "26000017": "wizard"
+  }
+}

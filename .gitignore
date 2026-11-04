@@ -1,0 +1,16 @@
+runtime/
+packages/
+game/
+__pycache__/
+*.pyc
+.DS_Store
+/cache/
+/replays/
+/Background.png
+/config/.engine.lock
+/config/game.json
+/.update-rollback/
+/updater/.work-*/
+*.apk
+*.apkm
+*.xapk
